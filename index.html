@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js example</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      /* max-width: 1024px; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+    canvas {
+      display: block;
+    }
+    .a-list {
+      display: none;
+      transform: translateX(-8px);
+    }
+    .a-list .a-item {
+      border: 1px solid #ccc;
+      padding: 8px 16px;
+      cursor: pointer;
+      margin: 0 0 16px;
+      width: 800px;
+      transition: background 0.15s ease-out;
+      background-color: rgb(228, 236, 245);
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 50px;
+      background-color: rgb(228, 236, 245);
+      cursor: pointer;
+    }
+    #result {
+      display: none;
+      width: 300px;
+      height: 200px;
+      font-size: 28px;
+      font-weight: bold;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background: #dedfef;
+      border-radius: 8px;
+    }
+  </style>
+  
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.7.1.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+  <script src="p5.js"></script>
+  <script src="data.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <main>
+  </main>
+  <div class="button">Start</div>
+  <div class="a-list">
+    <div class="a-item">A: <span></span></div>
+    <div class="a-item">B: <span></span></div>
+    <div class="a-item">C: <span></span></div>
+  </div>
+  <div id="result"></div>
+  <div id="result-chart" style="width: 600px;height: 400px"></div>
+  <div id="online">Current online population: 1</div>
+</body>
+
+</html>
